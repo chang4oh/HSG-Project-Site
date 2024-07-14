@@ -1,0 +1,231 @@
+body {
+    background-image: linear-gradient(#051b33 25%,#02050a 75%);
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.text{
+    color: #f2f4f7;
+    font-size: 18px;
+  }
+
+ul {
+    color: #c7ccd4;
+    list-style: none;
+    font-size: 18px;
+    display:flex;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Sect*/
+.header {
+    color: #c7ccd4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+}
+
+.left-icon, .right-icon {
+    margin: 10px;
+    background:rgb(2, 1, 3);
+    display: flex;
+    flex-direction: row;
+}
+
+.right-icon {
+display: flex;
+justify-content: flex-end;
+}
+
+.fas {
+    color:white;
+   margin: 10px;
+}
+
+/*Hero Sect*/
+.hero {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    background-image:linear-gradient(#03080edc 25%, #000208 75% );
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 85px;
+    margin:25px;
+    gap: 35px;
+
+}
+
+.hinfo {
+    display:flex; 
+    font-weight: 550;
+    font-size: 20px;
+    opacity: 0.85;
+}
+
+.large {
+    display: flex;
+    text-align: start;    
+    font-family: 'Montserrat', sans-serif;
+    font-weight:900;
+    font-size: 48px;
+}
+
+#topbtn {
+    display: flex;
+    flex-grow: 0;
+    margin-top:
+}
+
+.image {
+    display: flex;
+    align-self: flex-end;
+    padding: 0;
+    margin: 0;
+    justify-content:flex-end;
+    width: auto;
+}
+
+
+/*Main Sect*/
+.mid {
+    font-family: 'Montserrat', sans-serif;
+    color:#f2f4f7;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 45px;
+    margin-top: 45px;
+}
+
+.playlist {
+    border-radius: 5px;  
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.content-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    text-align: center;
+    gap: 300px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+/*Bottom Sect*/
+
+button {
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 13px;
+    font-weight:bold;
+    background-color:transparent;
+    border: 2px solid #c7ccd4;
+    color:#c7ccd4;
+    cursor: pointer;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+button:hover {
+color: #f2f4f7;
+background-color:#20252e80;
+transform: scale(1.05) perspective(1px);
+}
+
+.bot-sect {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(0, 0, 0);
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.quote {
+    color: #f2f4f7;
+    font-size: 26px;
+}
+
+.name {
+    color:#f2f4f7;
+}
+
+.bottom {
+    color:#c7ccd4;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#tag {
+    font-size: 25px;
+    font-weight: 550;
+    
+}
+
+/*Call To Action Sect*/
+
+.cta-bg {
+    background-image: linear-gradient(black, rgb(5, 10, 15));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 30px;
+    background-image:linear-gradient(rgb(31, 46, 56), rgb(9, 15, 26));
+    border-radius:15px ;
+    opacity: 0.95;
+    width: 35%;
+}
+
+
+/*Footer Sect*/
+.footer {
+    color:#3c424e;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.486);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
