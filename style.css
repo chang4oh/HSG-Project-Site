@@ -36,7 +36,8 @@ ul {
 .left-icon, .right-icon {
     margin: 10px;
     display: flex;
-    
+    font-size:large;
+    font-weight:900;
 }
 
 .right-icon {
