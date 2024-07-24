@@ -1,3 +1,1 @@
-# BestDayTravel
-## Detail
-BestDayTravel is 
+# bestdaytravels
