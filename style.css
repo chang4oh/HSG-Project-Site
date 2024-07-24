@@ -26,11 +26,9 @@ ul {
 
 /* Navbar Sect*/
 .header {
-    color: #213638;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #cfe7e5;
 }
 
 .left-icon, .right-icon {
@@ -46,60 +44,56 @@ justify-content: flex-end;
 }
 
 .fas {
-    color: #213638;
    margin: 10px;
 }
 
 /*Hero Sect*/
-.hero {
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('/front_icon.png') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: #213638;
+    text-align: center;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2em;
     margin: 0;
-    padding: 0;
-    display:flex; 
-    justify-content: center;
-    align-items: center;
-    background-color: #213638;
-    overflow: hidden;
 }
 
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 25px;
-    padding-bottom: 85px;
-    margin:25px;
-    gap: 35px;
-
+.content p {
+    font-size: 1.5em;
 }
 
-.hinfo {
-    display:flex; 
-    font-weight: 550;
-    font-size: 20px;
-    opacity: 0.85;
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.large {
-    display: flex;
-    text-align: start;    
-    font-family: 'Montserrat', sans-serif;
-    font-weight:900;
-    font-size: 48px;
+button:hover {
 }
 
-#topbtn {
-    display: flex;
-    flex-grow: 0;
-}
-
-.image {
-    display: flex;
-    align-self: flex-end;
-    padding: 0;
-    margin: 0;
-    justify-content:flex-end;
-    width: auto;
-}
 
 
 /*Main Sect*/
@@ -155,8 +149,8 @@ button {
     font-size: 13px;
     font-weight:bold;
     background-color:transparent;
-    border: 2px solid #c7ccd4;
-    color:#c7ccd4;
+    border: 2px solid #213638;
+    color:#213638;
     cursor: pointer;
     padding-left: 40px;
     padding-right: 40px;
