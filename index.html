@@ -7,6 +7,8 @@
 <html>
 	<head>
     <link rel="icon" type="image/x-icon" href="/images/travel_icon.png">
+	<!--google sign-->
+	<meta name="google-signin-client_id" content="511076543925-hqst3kpifqmd518i3ff0j31ilokcf1tk.apps.googleusercontent.com">
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MNY190N9E"></script>
@@ -24,6 +26,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		
 
 		<!-- Header -->
 			<header id="header">
@@ -32,8 +35,14 @@
 					<p>Find the best days for traveling!<br />
 					<!--template brought to you by <a href="http://html5up.net">HTML5 UP</a></p>-->
 					<ul class="actions">
-						<li><a href="#" class="button primary icon solid fa-download">Download</a></li>
-						<li><a href="#one" class="button icon solid fa-chevron-down scrolly">Learn More</a></li>
+						<!--Sign out and sign in google-->
+						<a href="#" onclick="signOut();">Sign out</a>
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
+						
+
+
+
+
 					</ul>
 				</div>
 				<div class="image phone"><div class="inner"><img src="images/screen.jpg" alt="" /></div></div>
@@ -438,5 +447,28 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<!--google sign-->
+			<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+			<script>
+				function signOut() {
+				  var auth2 = gapi.auth2.getAuthInstance();
+				  auth2.signOut().then(function () {
+					console.log('User signed out.');
+				  });
+				}
+				// auth2 is initialized with gapi.auth2.init() and a user is signed in.
+
+				if (auth2.isSignedIn.get()) {
+					var profile = auth2.currentUser.get().getBasicProfile();
+					console.log('ID: ' + profile.getId());
+					console.log('Full Name: ' + profile.getName());
+					console.log('Given Name: ' + profile.getGivenName());
+					console.log('Family Name: ' + profile.getFamilyName());
+					console.log('Image URL: ' + profile.getImageUrl());
+					console.log('Email: ' + profile.getEmail());
+				}
+
+			</script>
 	</body>
 </html>
