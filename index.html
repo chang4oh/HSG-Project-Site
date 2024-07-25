@@ -46,6 +46,19 @@
 								  data-logo_alignment="left">
 								  
 							  </div>
+								<div class="data">
+								        <p>
+								            Name 
+								        </p>
+								        <p id = "name" class=""></p>
+								        <p>Profile pic</p>
+								        <img id="image" src="" class="rounded-circle" alt="" width="100" height="100">
+								        <p>
+								            Email 
+								        </p>
+								        <p id="email"></p>
+								        <button type="button" class="" onclick="signout();">Signout</button>
+								</div>
 							<body>
 				
 							<script>
@@ -61,7 +74,33 @@
 								console.log("Image URL: " + responsePayload.picture);
 								console.log("Email: " + responsePayload.email);
 							}
+								function onSignIn(googleUser) {
+								    var profile = googleUser.getBasicProfile();
+								    $("#name").text(profile.getName);
+								    $("#email").text(profile.getEmail);
+								    $("#image").attr("src", profile.getImageUrl());
+								    $(".data").css("display", "block");
+								    $(".g_id_signin").css("display", "none");
+								    // console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+								    // console.log('Name: ' + profile.getName());
+								    // console.log('Image URL: ' + profile.getImageUrl());
+								    // console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+								  }
+								
+								  function signOut() {
+								    var auth2 = gapi.auth2.getAuthInstance();
+								    auth2.signOut().then(function () {
+								      alert("You've been signed out.");
+								    });
+								
+								    $(".data").css("display", "none");
+								    $(".g_id_signin").css("display", "inline");
+								  }
+								
 							</script>
+						    <script src="https://apis.google.com/js/platform.js" async defer></script>
+						    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+						    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 						  </html>
 						  
 
